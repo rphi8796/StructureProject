@@ -6,10 +6,6 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		5EC22CF721FF5B5300F3F7D0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EC22CF621FF5B5300F3F7D0 /* main.cpp */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		5EC22CF121FF5B5200F3F7D0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -24,7 +20,8 @@
 
 /* Begin PBXFileReference section */
 		5EC22CF321FF5B5200F3F7D0 /* StructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EC22CF621FF5B5300F3F7D0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5EC22D0121FF5CCA00F3F7D0 /* NodeDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NodeDiagram.png; sourceTree = "<group>"; };
+		5EC22D0221FF5CE500F3F7D0 /* LinearNodeDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LinearNodeDiagram.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +54,42 @@
 		5EC22CF521FF5B5300F3F7D0 /* StructureProject */ = {
 			isa = PBXGroup;
 			children = (
-				5EC22CF621FF5B5300F3F7D0 /* main.cpp */,
+				5EC22CFF21FF5BE900F3F7D0 /* Model */,
+				5EC22CFE21FF5BE600F3F7D0 /* Controller */,
+				5EC22CFD21FF5BD800F3F7D0 /* Diagrams */,
+				5EC22D0021FF5BEC00F3F7D0 /* Resources */,
 			);
 			path = StructureProject;
+			sourceTree = "<group>";
+		};
+		5EC22CFD21FF5BD800F3F7D0 /* Diagrams */ = {
+			isa = PBXGroup;
+			children = (
+				5EC22D0221FF5CE500F3F7D0 /* LinearNodeDiagram.png */,
+				5EC22D0121FF5CCA00F3F7D0 /* NodeDiagram.png */,
+			);
+			path = Diagrams;
+			sourceTree = "<group>";
+		};
+		5EC22CFE21FF5BE600F3F7D0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5EC22CFF21FF5BE900F3F7D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EC22D0021FF5BEC00F3F7D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EC22CF721FF5B5300F3F7D0 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
