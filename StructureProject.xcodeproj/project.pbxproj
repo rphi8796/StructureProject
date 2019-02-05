@@ -72,7 +72,6 @@
 				5E1348AD2209DD4800EFB324 /* Tools */,
 				5E4A1E5E2201F40200933877 /* Controller.cpp */,
 				5E4A1E602201F40200933877 /* Controller.hpp */,
-				5E4A1E5F2201F40200933877 /* Runnner.cpp */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,6 +111,7 @@
 		5EC22CF521FF5B5300F3F7D0 /* StructureProject */ = {
 			isa = PBXGroup;
 			children = (
+				5E4A1E5F2201F40200933877 /* Runnner.cpp */,
 				5E4A1E5D2201F3DD00933877 /* Controller */,
 				5EC22CFF21FF5BE900F3F7D0 /* Model */,
 				5EC22CFD21FF5BD800F3F7D0 /* Diagrams */,

@@ -20,6 +20,7 @@ void Timer :: resetTimer()
     executionTime = 0;
 }
 
+//clock gives time since like 1970, and it does not change it just returns a long value for that time
 void Timer :: startTimer()
 {
     executionTime = clock();
@@ -37,7 +38,7 @@ void Timer :: displayInformation()
     cout << "In human time it is " << double (executionTime)/CLOCKS_PER_SEC << " seconds" << endl;
 }
 
-long Timer ::  getTimeInMicroseconds()
+long Timer :: getTimeInMicroseconds()
 {
     return executionTime;
 }
