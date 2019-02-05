@@ -26,6 +26,7 @@ public:
     
     //copy constructor
     Array<Type>(const Array<Type> & toCopy);
+    
     //destructor
     ~Array<Type>();
     

@@ -19,6 +19,7 @@ private:
 public:
     Node();
     Node(Type data);
+    
     Type getData();
     void setData(Type data);
 };

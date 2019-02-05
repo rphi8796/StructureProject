@@ -59,7 +59,6 @@ LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(
 }
 
 //Accessor methods
-
 template <class Type>
 LinearNode<Type> * LinearNode<Type> :: getNext()
 {

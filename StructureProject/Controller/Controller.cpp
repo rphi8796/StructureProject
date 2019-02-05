@@ -11,15 +11,15 @@
 
 void Controller :: start()
 {
-    cout << "ayeeee" << endl;
+    cout << ":)" << endl;
     usingNodes();
 }
 
 void Controller :: usingNodes()
 {
-    Node<int> mine(5);
+    Node<int> num(6);
     Node<string> wordHolder("words can be stored too");
-    cout << mine.getData() << endl;
+    cout << num.getData() << endl;
     cout << wordHolder.getData() << endl;
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
