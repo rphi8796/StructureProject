@@ -23,8 +23,8 @@ public:
     LinearNode(Type data);
     LinearNode(Type data, LinearNode<Type> * next);
     //Methods
-    void setNext(LinearNode<Type> * next);
-    LinearNode<Type> * getNext();
+    void setNextNode(LinearNode<Type> * next);
+    LinearNode<Type> * getNextNode();
 };
 
 //Constructors
@@ -60,13 +60,13 @@ LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(
 
 //Accessor methods
 template <class Type>
-LinearNode<Type> * LinearNode<Type> :: getNext()
+LinearNode<Type> * LinearNode<Type> :: getNextNode()
 {
     return this->next;
 }
 
 template <class Type>
-void LinearNode<Type> :: setNext(LinearNode<Type> * next)
+void LinearNode<Type> :: setNextNode(LinearNode<Type> * next)
 {
     this->next = next;
 }
