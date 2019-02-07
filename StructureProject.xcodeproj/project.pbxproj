@@ -34,7 +34,7 @@
 		5E4A1E5E2201F40200933877 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		5E4A1E5F2201F40200933877 /* Runnner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Runnner.cpp; sourceTree = "<group>"; };
 		5E4A1E602201F40200933877 /* Controller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
-		5E4A1E632201F49B00933877 /* LinearNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearNode.h; sourceTree = "<group>"; };
+		5E4A1E632201F49B00933877 /* LinearNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearNode.hpp; sourceTree = "<group>"; };
 		5EC22CF321FF5B5200F3F7D0 /* StructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC22D0121FF5CCA00F3F7D0 /* NodeDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NodeDiagram.png; sourceTree = "<group>"; };
 		5EC22D0221FF5CE500F3F7D0 /* LinearNodeDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LinearNodeDiagram.png; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		5E99F93C2201F24400612B12 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
-				5E4A1E632201F49B00933877 /* LinearNode.h */,
+				5E4A1E632201F49B00933877 /* LinearNode.hpp */,
 				5EC22D0F21FF60BE00F3F7D0 /* Node.hpp */,
 			);
 			path = Nodes;
