@@ -36,7 +36,7 @@ public:
     Type getFromIndex(int index);
     Type remove(int index);
     Type setAtIndex(int index, Type item);
-//    bool contains(Type item);
+    bool contains(Type item);
 };
 
 //Constructor
@@ -176,7 +176,33 @@ Type LinkedList<Type> :: remove(int index)
 template <class Type>
 Type LinkedList<Type> :: setAtIndex(int index, Type item)
 {
+    assert (index >= 0 && index < this->size);
+    LinearNode<Type> * current = front;
     
+    for (int position = 0; position < index; position++)
+    {
+        current = current->getNextNode();
+    }
+    current->setData(item);
+}
+
+template <class Type>
+bool LinkedList<Type> :: contains(Type item);
+{
+    assert(index >= 0);
+    LinearNode<Type> * current = front;
+    bool isThere = false;
+    
+    for (int position = 0; position < this->size; position)
+    {
+        Type value = current->getData();
+        if (value == item)
+        {
+            isThere = true;
+        }
+        current = current->getNextNode();
+    }
+    return isThere;
 }
 
 

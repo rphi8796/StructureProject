@@ -13,6 +13,7 @@ void Controller :: start()
 {
     cout << ":)" << endl;
     usingNodes();
+    testFiles();
 }
 
 void Controller :: usingNodes()
@@ -23,4 +24,13 @@ void Controller :: usingNodes()
     cout << wordHolder.getData() << endl;
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
+}
+
+void Controller :: testFiles()
+{
+    vector<CrimeData> contents = FileController :: readCrimeDataToVector("../Resources/crime.csv");
+    for (int index = 234; index < 256; index++)
+    {
+        cout << index << ": contents are: " << contents[index] << endl;
+    }
 }

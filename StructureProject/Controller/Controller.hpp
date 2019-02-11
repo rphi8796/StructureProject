@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "../Model/Nodes/Node.hpp"
+#include "FileController.hpp"
 
 using namespace std;
 
@@ -18,6 +19,7 @@ class Controller
 {
 private:
     void usingNodes();
+    void testFiles();
 public:
     void start();
     
