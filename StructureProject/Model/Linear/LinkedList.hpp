@@ -24,24 +24,24 @@ public:
     //Constructors
     LinkedList();
     //Destructor
-    Virtual ~LinkedList();
+    ~LinkedList();
     //Helper methods
     int getSize() const;
     LinearNode<Type> * getFront();
     LinearNode<Type> * getEnd();
     
     //Structure Methods
-    void add(Type item);
-    void addAtIndex(int index, Type item);
-    Type getFromIndex(int index);
-    Type remove(int index);
+    virtual void add(Type item);
+    virtual void addAtIndex(int index, Type item);
+    virtual Type getFromIndex(int index);
+    virtual Type remove(int index);
     Type setAtIndex(int index, Type item);
     bool contains(Type item);
 };
 
 //Constructor
 template <class Type>
-LinkedList<Type> :: linkedList()
+LinkedList<Type> :: LinkedList()
 {
     this->front = nullptr;
     this->end = nullptr;
@@ -67,7 +67,7 @@ void LinkedList<Type> :: add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
     
-    if(this->size= 0)
+    if(this->size == 0)
     {
         this->front = newData;
     }
@@ -101,15 +101,15 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
         {
             LinearNode<Type> * previous = nullptr;
             LinearNode<Type> * current = front;
-            for (int position; position < index: position++)
+            for (int position; position < index; position++)
             {
                 previous = current;
                 current = current->getNextNode();
             }
             previous->setNextNode(toBeAdded);
-            toBeAdded->setNextNode(currect);
+            toBeAdded->setNextNode(current);
         }
-        this->size++
+        this->size++;
     }
 }
 
@@ -187,9 +187,8 @@ Type LinkedList<Type> :: setAtIndex(int index, Type item)
 }
 
 template <class Type>
-bool LinkedList<Type> :: contains(Type item);
+bool LinkedList<Type> :: contains(Type item)
 {
-    assert(index >= 0);
     LinearNode<Type> * current = front;
     bool isThere = false;
     

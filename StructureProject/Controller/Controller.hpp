@@ -19,7 +19,7 @@ class Controller
 {
 private:
     void usingNodes();
-    void testFiles();
+//    void testFiles();
 public:
     void start();
     
