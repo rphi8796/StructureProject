@@ -41,12 +41,12 @@ Queue<Type> :: Queue() : LinkedList<Type>()
 }
 
 template <class Type>
-~Queue<Type> :: ~Queue()
+Queue<Type> :: ~Queue()
 {
     for (LinearNode<Type> * removed = this->front; removed != nullptr; removed = this->front)
     {
         this->front = removed->getNextNode();
-        deletedr removed();
+        delete removed();
     }
 }
 
@@ -69,7 +69,7 @@ void Queue<Type> :: enqueue(Type item)
 }
 
 template <class Type>
-void Queue<Type> :: addedAtIndex(int index, Type item)
+void Queue<Type> :: addAtIndex(int index, Type item)
 {
     assert(index == this->size);
     enqueue(item);
@@ -82,7 +82,7 @@ void Queue<Type> :: add(Type item)
 }
 
 template <class Type>
-Type Queue<Type> :: dsequeue()
+Type Queue<Type> :: dequeue()
 {
     assert(this->size > 0);
     
@@ -91,9 +91,9 @@ Type Queue<Type> :: dsequeue()
     LinearNode<Type> * removed = this->front;
     this->front = removed->getNextNode();
     
-    deleted removed;
+    delete removed;
     
-    this->size = this->size - 1
+    this->size = this->size - 1;
     
     return returned;
 }
@@ -101,14 +101,14 @@ Type Queue<Type> :: dsequeue()
 template <class Type>
 Type Queue<Type> :: remove(int index)
 {
-    assert(inex == 0);
+    assert(index == 0);
     return dequeue();
 }
 
 template <class Type>
 void Queue<Type> :: clear()
 {
-    while(this->frtont != mullptr)
+    while(this->frtont != nullptr)
     {
         cout << dequeue() << endl;
     }

@@ -112,3 +112,38 @@ LinkedList<CrimeData> FileController :: readDataToList(string fileName)
     
     return crimes;
 }
+
+LinkedList<Music> FileController :: musicDataToList(string filename)
+{
+    LinkedList<Music> music;
+    
+    string currentCSVLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(filename);
+    
+    if (dataFile.is_open())
+    {
+        while (!dataFile.eof())
+        {
+            getline(dataFile, currentCSVLine, '\r');
+            
+            if (rowCount != 0)
+            {
+                if (currentCSVLine.length() != 0)
+                {
+                    Music row(currentCSVLine);
+                    music.add(row);
+                }
+            }
+            rowCount++;
+        }
+        dataFile.close();
+    }
+    else
+    {
+        cerr << "NO FILE" << endl;
+    }
+    
+    return music;
+}

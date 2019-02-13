@@ -12,25 +12,27 @@
 void Controller :: start()
 {
     cout << ":)" << endl;
-    usingNodes();
-//    testFiles();
+//    usingNodes();
+    testFiles();
 }
 
-void Controller :: usingNodes()
-{
-    Node<int> num(6);
-    Node<string> wordHolder("words can be stored too");
-    cout << num.getData() << endl;
-    cout << wordHolder.getData() << endl;
-    wordHolder.setData("replaced text");
-    cout << wordHolder.getData() << endl;
-}
-
-//void Controller :: testFiles()
+//void Controller :: usingNodes()
 //{
-//    vector<CrimeData> contents = FileController :: readCrimeDataToVector("../Resources/crime.csv");
-//    for (int index = 234; index < 256; index++)
-//    {
-//        cout << index << ": contents are: " << contents[index] << endl;
-//    }
+//    Node<int> num(6);
+//    Node<string> wordHolder("words can be stored too");
+//    cout << num.getData() << endl;
+//    cout << wordHolder.getData() << endl;
+//    wordHolder.setData("replaced text");
+//    cout << wordHolder.getData() << endl;
 //}
+
+void Controller :: testFiles()
+{
+    Array<int> hey(4);
+    hey[0] = 0;
+    hey[1] = 1;
+    hey[2] = 2;
+    hey[3] = 3;
+    
+    cout << hey[3] << endl;
+}

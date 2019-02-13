@@ -85,7 +85,7 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
         
         for (int index = 0; index < size; index++)
         {
-            internalArray[index] = toAssign[]
+            internalArray[index] = toAssign[index];
         }
     }
     return *this;
@@ -94,7 +94,7 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 template <class Type>
 Type & Array<Type> :: operator [] (int index)
 {
-    assert(index >= && index < size);
+    assert(index >= 0 && index < size);
     return internalArray[index];
 }
 
@@ -115,7 +115,7 @@ int Array<Type> :: getSize() const
 template <class Type>
 Type Array<Type> :: getFromIndex(int index)
 {
-    assert(index >= && index < size);
+    assert(index >= 0 && index < size);
     
     Type value = internalArray[index];
     

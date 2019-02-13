@@ -10,16 +10,27 @@
 #define Controller_hpp
 
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <vector>
 #include "../Model/Nodes/Node.hpp"
+#include "../Model/Nodes/LinearNode.hpp"
+#include "../Model/Linear/Array.hpp"
+#include "../Model/Linear/List.hpp"
+#include "../Model/Linear/LinkedList.hpp"
+#include "../Model/Linear/Stack.hpp"
+#include "../Model/Linear/Queue.hpp"
 #include "FileController.hpp"
+
 
 using namespace std;
 
 class Controller
 {
 private:
-    void usingNodes();
-//    void testFiles();
+//    void usingNodes();
+    void testFiles();
 public:
     void start();
     

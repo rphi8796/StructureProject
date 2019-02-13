@@ -23,8 +23,10 @@ protected:
 public:
     //Constructors
     LinkedList();
+    
     //Destructor
     ~LinkedList();
+    
     //Helper methods
     int getSize() const;
     LinearNode<Type> * getFront();
@@ -101,7 +103,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
         {
             LinearNode<Type> * previous = nullptr;
             LinearNode<Type> * current = front;
-            for (int position; position < index; position++)
+            for (int position = 0; position < index; position++)
             {
                 previous = current;
                 current = current->getNextNode();
