@@ -22,6 +22,7 @@
 #include "../Model/Linear/Stack.hpp"
 #include "../Model/Linear/Queue.hpp"
 #include "FileController.hpp"
+#include "../Testers/LinearTester.hpp"
 
 
 using namespace std;

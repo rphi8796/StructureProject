@@ -28,11 +28,6 @@ void Controller :: start()
 
 void Controller :: testFiles()
 {
-    Array<int> hey(4);
-    hey[0] = 0;
-    hey[1] = 1;
-    hey[2] = 2;
-    hey[3] = 3;
-    
-    cout << hey[3] << endl;
+    LinearTester test;
+    test.testVsSTL();
 }
