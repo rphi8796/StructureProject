@@ -26,6 +26,7 @@ public:
     //Overridden LinkedList methods
     void add(Type data);
     void addAtIndex(int index, Type data);
+    
     Type getFromIndex(int index);
     Type remove(int index);
 };
