@@ -12,8 +12,7 @@
 void Controller :: start()
 {
     cout << ":)" << endl;
-//    usingNodes();
-    testFiles();
+    testLinear();
 }
 
 //void Controller :: usingNodes()
@@ -26,7 +25,7 @@ void Controller :: start()
 //    cout << wordHolder.getData() << endl;
 //}
 
-void Controller :: testFiles()
+void Controller :: testLinear()
 {
     LinearTester test;
     test.testVsSTL();

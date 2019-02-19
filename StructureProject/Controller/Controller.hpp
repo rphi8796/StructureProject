@@ -31,7 +31,7 @@ class Controller
 {
 private:
 //    void usingNodes();
-    void testFiles();
+    void testLinear();
 public:
     void start();
     
