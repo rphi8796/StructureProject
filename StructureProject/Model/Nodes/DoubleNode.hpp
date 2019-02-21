@@ -57,7 +57,7 @@ DoubleNode<Type> :: DoubleNode(Type data, DoubleNode<Type> * previous, DoubleNod
 
 //Getters
 template <class Type>
-void DoubleNode<Type> :: getPrevious()
+DoubleNode<Type> * DoubleNode<Type> :: getPrevious()
 {
     return previous;
 }
@@ -65,7 +65,7 @@ void DoubleNode<Type> :: getPrevious()
 template <class Type>
 DoubleNode<Type> * DoubleNode<Type> :: getNext()
 {
-    return next
+    return next;
 }
 
 //Setters
@@ -76,11 +76,9 @@ void DoubleNode<Type> :: setNext(DoubleNode<Type> * next)
 }
 
 template <class Type>
+void DoubleNode<Type> :: setPrevious(DoubleNode<Type> * previous)
 {
     this->previous = previous;
 }
-
-
-
 
 #endif /* DoubleNode_h */

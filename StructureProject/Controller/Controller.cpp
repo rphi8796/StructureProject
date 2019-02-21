@@ -11,8 +11,9 @@
 
 void Controller :: start()
 {
-    cout << ":)" << endl;
+    cout << 5 << endl;
     testLinear();
+    testCircular();
 }
 
 //void Controller :: usingNodes()
@@ -27,6 +28,18 @@ void Controller :: start()
 
 void Controller :: testLinear()
 {
-    LinearTester test;
-    test.testVsSTL();
+    CircularList<int> * okay = new CircularList<int>();
+    okay->add(8);
+    okay->add(7);
+    okay->add(6);
+    cout << okay->getSize() << endl;
+}
+
+void Controller :: testCircular()
+{
+    CircularList<int> okay;
+    okay.add(8);
+    okay.add(7);
+    okay.add(6);
+//    cout << okay.getSize() << endl;
 }

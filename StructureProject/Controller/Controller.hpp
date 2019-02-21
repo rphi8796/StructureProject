@@ -14,15 +14,18 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "FileController.hpp"
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
+#include "../Model/Nodes/DoubleNode.hpp"
 #include "../Model/Linear/Array.hpp"
 #include "../Model/Linear/List.hpp"
 #include "../Model/Linear/LinkedList.hpp"
 #include "../Model/Linear/Stack.hpp"
 #include "../Model/Linear/Queue.hpp"
-#include "FileController.hpp"
+#include "../Model/Linear/CircularList.hpp"
 #include "../Testers/LinearTester.hpp"
+
 
 
 using namespace std;
@@ -32,6 +35,7 @@ class Controller
 private:
 //    void usingNodes();
     void testLinear();
+    void testCircular();
 public:
     void start();
     
