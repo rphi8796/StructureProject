@@ -41,8 +41,8 @@ public:
 template <class Type>
 CircularList<Type> :: CircularList()
 {
-    front = nullptr;
-    end = nullptr;
+    this->front = nullptr;
+    this->end = nullptr;
     /*I must set to 0 because C++ will set the default value is whatever value is stored
       where it is beign assigned
     */
@@ -53,7 +53,7 @@ template <class Type>
 CircularList<Type> :: ~CircularList()
 {
     DoubleNode<Type> * current = front;
-    while(front != nullptr)
+    while(front != nullptr && this->front != front->getNext())
     {
         front = current->getNext();
         delete current;
@@ -99,10 +99,11 @@ void CircularList<Type> :: add(Type item)
     else
     {
         addedNode = new DoubleNode<Type>(item, this->end, this->front);
-        this->end->setNext(addedNode);
     }
+    this->end->setNext(addedNode);
+    this->front->setPrevious(addedNode);
     this->end = addedNode;
-    this->size++;
+    this->size += 1;
 }
 
 template <class Type>
@@ -173,7 +174,7 @@ Type CircularList<Type> :: remove(int index)
 template <class Type>
 int CircularList<Type> :: getSize() const
 {
-    return this->size;Type remove(int index);
+    return this->size;
 }
 
 

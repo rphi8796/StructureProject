@@ -23,10 +23,10 @@ using namespace std;
 class FileController
 {
 public:
-    static vector<CrimeData> readCrimeDataToVector(string filename);
+    static vector<CrimeData> crimeDataToVector(string fileName);
     static vector<Music> musicDataToVector(string fileName);
-    static LinkedList<CrimeData> readDataToList(string filename);
-    static LinkedList<Music> musicDataToList(string filename);
+    static LinkedList<CrimeData> crimeDataToList(string fileName);
+    static LinkedList<Music> musicDataToList(string fileName);
 };
 
 #endif /* FileController_hpp */

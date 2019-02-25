@@ -8,13 +8,13 @@
 
 #include "FileController.hpp"
 
-vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
+vector<CrimeData> FileController :: crimeDataToVector(string fileName)
 {
     std :: vector<CrimeData> crimeVector;
     string currentCSVLine;
     int rowCount = 0;
     
-    ifstream dataFile(filename);
+    ifstream dataFile(fileName);
     
     //If the file Exists at that path
     if(dataFile.is_open())
@@ -44,13 +44,13 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
     return crimeVector;
 }
 
-vector<Music> FileController :: musicDataToVector(string filename)
+vector<Music> FileController :: musicDataToVector(string fileName)
 {
     vector<Music> musicVector;
     string currentCSVLine;
     int rowCount = 0;
     
-    ifstream dataFile(filename);
+    ifstream dataFile(fileName);
     
     if(dataFile.is_open())
     {
@@ -78,10 +78,9 @@ vector<Music> FileController :: musicDataToVector(string filename)
 }
 
 
-LinkedList<CrimeData> FileController :: readDataToList(string fileName)
+LinkedList<CrimeData> FileController :: crimeDataToList(string fileName)
 {
     LinkedList<CrimeData> crimes;
-    
     string currentCSVLine;
     int rowCount = 0;
     
@@ -103,7 +102,7 @@ LinkedList<CrimeData> FileController :: readDataToList(string fileName)
             }
             rowCount++;
         }
-       dataFile.close();
+        dataFile.close();
     }
     else
     {
@@ -113,20 +112,19 @@ LinkedList<CrimeData> FileController :: readDataToList(string fileName)
     return crimes;
 }
 
-LinkedList<Music> FileController :: musicDataToList(string filename)
+LinkedList<Music> FileController :: musicDataToList(string fileName)
 {
     LinkedList<Music> music;
-    
     string currentCSVLine;
     int rowCount = 0;
     
-    ifstream dataFile(filename);
+    ifstream dataFile(fileName);
     
     if (dataFile.is_open())
     {
         while (!dataFile.eof())
         {
-            getline(dataFile, currentCSVLine, '\r');
+            getline(dataFile, currentCSVLine, '\n');
             
             if (rowCount != 0)
             {

@@ -13,7 +13,6 @@ void Controller :: start()
 {
     cout << 5 << endl;
     testLinear();
-    testCircular();
 }
 
 //void Controller :: usingNodes()
@@ -28,18 +27,24 @@ void Controller :: start()
 
 void Controller :: testLinear()
 {
-    CircularList<int> * okay = new CircularList<int>();
-    okay->add(8);
-    okay->add(7);
-    okay->add(6);
-    cout << okay->getSize() << endl;
+    LinearTester test;
+    test.testVsSTL();
+    test.testVsStack();
 }
 
 void Controller :: testCircular()
 {
-    CircularList<int> okay;
-    okay.add(8);
-    okay.add(7);
-    okay.add(6);
+//    LinkedList<int> kno;
+//    kno.add(4);
+//    kno.add(6);
+//    kno.add(5);
+//    cout << kno.getSize() << endl;
+//    DoubleNode<int> * one = new DoubleNode<int>(1);
+//    DoubleNode<int> * three = new DoubleNode<int>(3);
+//    DoubleNode<int> * two = new DoubleNode<int>(2, nullptr, nullptr);
+//    CircularList<int> okay;
+//    okay.add(8);
+//    okay.add(7);
+//    okay.add(6);
 //    cout << okay.getSize() << endl;
 }
