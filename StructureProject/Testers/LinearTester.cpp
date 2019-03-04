@@ -94,10 +94,61 @@ void LinearTester :: testVsStack()
 
 void LinearTester :: testVsQueue()
 {
-    
+    vector<Music> musicVector = FileController :: musicDataToVector("/Users/rphi8796/Documents/C++/StructureProject/StructureProject/Resources/music.csv");
+    LinkedList<Music> musicList = FileController :: musicDataToList("/Users/rphi8796/Documents/C++/StructureProject/StructureProject/Resources/music.csv");
+    Queue<Music> musicQueue;
+    for (int i = 0; i < 10; i++)
+    {
+        Music value = musicVector[i];
+        musicQueue.enqueue(value);
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        musicQueue.dequeue();
+    }
 }
 
 void LinearTester :: testVsDouble()
 {
+    Timer listTimer, circleTimer;
     
+    listTimer.startTimer();
+    LinkedList<CrimeData> crimeList = FileController :: crimeDataToList("/Users/rphi8796/Documents/C++/StructureProject/StructureProject/Resources/crime.csv");
+    listTimer.stopTimer();
+    
+    circleTimer.startTimer();
+    CircularList<CrimeData> crimeCircle;
+    for (int i = 0; i < 100; i++)
+    {
+        CrimeData value = crimeList.getFromIndex(i);
+        crimeCircle.add(value);
+    }
+    circleTimer.stopTimer();
+    
+    cout << " " << endl << " " << endl;
+    cout << "Linked List time" << endl;
+    listTimer.displayInformation();
+    cout << "Circular List time" << endl;
+    circleTimer.displayInformation();
+    cout << "A difference of " << listTimer.getTimeInMicroseconds() - circleTimer.getTimeInMicroseconds() << " microseconds" << endl;
+    
+    listTimer.resetTimer();
+    circleTimer.resetTimer();
+    
+    int randomIndex = rand() % 100;
+    
+    listTimer.startTimer();
+    crimeList.getFromIndex(randomIndex);
+    listTimer.stopTimer();
+    
+    circleTimer.startTimer();
+    crimeCircle.getFromIndex(randomIndex);
+    circleTimer.stopTimer();
+    
+    cout << "This is the Linked List's random retrieval time: " << endl;
+    listTimer.displayInformation();
+    cout << "This is the Circular List's random retrieval time: " << endl;
+    circleTimer.displayInformation();
+    cout << "A difference of: " << listTimer.getTimeInMicroseconds() - circleTimer.getTimeInMicroseconds() << " microseconds" << endl;
 }
+

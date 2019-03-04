@@ -53,12 +53,13 @@ template <class Type>
 CircularList<Type> :: ~CircularList()
 {
     DoubleNode<Type> * current = front;
-    while(front != nullptr && this->front != front->getNext())
+    while(this->front != nullptr && this->front != front->getNext())
     {
-        front = current->getNext();
+        front = front->getNext();
         delete current;
         current = front;
     }
+    delete front;
 }
 
 template <class Type>
@@ -95,12 +96,15 @@ void CircularList<Type> :: add(Type item)
     {
         addedNode = new DoubleNode<Type>(item);
         this->front = addedNode;
+        this->end = addedNode;
+        this->end->setNext(addedNode);
     }
     else
     {
         addedNode = new DoubleNode<Type>(item, this->end, this->front);
+        this->end->setNext(addedNode);
     }
-    this->end->setNext(addedNode);
+
     this->front->setPrevious(addedNode);
     this->end = addedNode;
     this->size += 1;
@@ -140,6 +144,14 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     previous->setNext(addMe);
     next->setPrevious(addMe);
     this->size++;
+}
+
+template <class Type>
+Type CircularList<Type> :: getFromIndex(int index)
+{
+    assert (index >= 0 && index < this->size);
+    DoubleNode<Type> * holder = findNode(index);
+    return holder->getData();
 }
 
 template <class Type>

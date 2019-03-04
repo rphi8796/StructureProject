@@ -46,7 +46,7 @@ Queue<Type> :: ~Queue()
     for (LinearNode<Type> * removed = this->front; removed != nullptr; removed = this->front)
     {
         this->front = removed->getNextNode();
-        delete removed();
+        delete removed;
     }
 }
 

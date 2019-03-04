@@ -30,6 +30,8 @@ void Controller :: testLinear()
     LinearTester test;
     test.testVsSTL();
     test.testVsStack();
+    test.testVsQueue();
+    test.testVsDouble();
 }
 
 void Controller :: testCircular()

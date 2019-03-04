@@ -16,6 +16,7 @@
 #include "../Model/Linear/Stack.hpp"
 #include "../Model/Linear/Queue.hpp"
 #include "../Model/Linear/Array.hpp"
+#include "../Model/Linear/CircularList.hpp"
 
 #include <iostream>
 using namespace std;
