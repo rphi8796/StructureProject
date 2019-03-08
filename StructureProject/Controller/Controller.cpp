@@ -12,18 +12,8 @@
 void Controller :: start()
 {
     cout << 5 << endl;
-    testLinear();
+    test();
 }
-
-//void Controller :: usingNodes()
-//{
-//    Node<int> num(6);
-//    Node<string> wordHolder("words can be stored too");
-//    cout << num.getData() << endl;
-//    cout << wordHolder.getData() << endl;
-//    wordHolder.setData("replaced text");
-//    cout << wordHolder.getData() << endl;
-//}
 
 void Controller :: testLinear()
 {
@@ -34,19 +24,13 @@ void Controller :: testLinear()
     test.testVsDouble();
 }
 
-void Controller :: testCircular()
+void Controller :: test()
 {
-//    LinkedList<int> kno;
-//    kno.add(4);
-//    kno.add(6);
-//    kno.add(5);
-//    cout << kno.getSize() << endl;
-//    DoubleNode<int> * one = new DoubleNode<int>(1);
-//    DoubleNode<int> * three = new DoubleNode<int>(3);
-//    DoubleNode<int> * two = new DoubleNode<int>(2, nullptr, nullptr);
-//    CircularList<int> okay;
-//    okay.add(8);
-//    okay.add(7);
-//    okay.add(6);
-//    cout << okay.getSize() << endl;
+    Graph<int> myGraph;
+    myGraph.addVertex(1);
+    myGraph.addVertex(2);
+    myGraph.addVertex(5);
+    myGraph.addEdge(1, 2);
+    myGraph.addEdgeUndirected(1, 0);
+    
 }

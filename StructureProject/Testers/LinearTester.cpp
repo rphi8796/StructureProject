@@ -118,7 +118,7 @@ void LinearTester :: testVsDouble()
     
     circleTimer.startTimer();
     CircularList<CrimeData> crimeCircle;
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 30; i++)
     {
         CrimeData value = crimeList.getFromIndex(i);
         crimeCircle.add(value);
@@ -135,7 +135,7 @@ void LinearTester :: testVsDouble()
     listTimer.resetTimer();
     circleTimer.resetTimer();
     
-    int randomIndex = rand() % 100;
+    int randomIndex = rand() % 30;
     
     listTimer.startTimer();
     crimeList.getFromIndex(randomIndex);

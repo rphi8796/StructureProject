@@ -25,6 +25,7 @@
 #include "../Model/Linear/Queue.hpp"
 #include "../Model/Linear/CircularList.hpp"
 #include "../Testers/LinearTester.hpp"
+#include "../Model/NonLinear/Graph.hpp"
 
 
 
@@ -35,7 +36,7 @@ class Controller
 private:
 //    void usingNodes();
     void testLinear();
-    void testCircular();
+    void test();
 public:
     void start();
     
