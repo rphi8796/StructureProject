@@ -26,6 +26,7 @@
 #include "../Model/Linear/CircularList.hpp"
 #include "../Testers/LinearTester.hpp"
 #include "../Model/NonLinear/Graph.hpp"
+#include "../Testers/GraphTester.hpp"
 
 
 

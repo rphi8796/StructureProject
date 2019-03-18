@@ -11,7 +11,8 @@
 
 void Controller :: start()
 {
-    readFromFile();
+    GraphTester test;
+    test.testGraphs();
 }
 
 void Controller :: readFromFile()
