@@ -34,9 +34,7 @@ using namespace std;
 class Controller
 {
 private:
-//    void usingNodes();
-    void testLinear();
-    void test();
+    void readFromFile();
 public:
     void start();
     

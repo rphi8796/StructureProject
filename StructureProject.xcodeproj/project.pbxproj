@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0BA92B223FDAEC0018D52F /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BA929223FDAEC0018D52F /* GraphTester.cpp */; };
 		5E1348B02209DD7C00EFB324 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E1348AE2209DD7C00EFB324 /* Timer.cpp */; };
 		5E4A1E612201F40200933877 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A1E5E2201F40200933877 /* Controller.cpp */; };
 		5E4A1E622201F40200933877 /* Runnner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A1E5F2201F40200933877 /* Runnner.cpp */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E0BA929223FDAEC0018D52F /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
+		5E0BA92A223FDAEC0018D52F /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
 		5E1348AE2209DD7C00EFB324 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		5E1348AF2209DD7C00EFB324 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		5E1348B1220A031C00EFB324 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = List.hpp; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 			children = (
 				5ECB9C7A22147E7D00FE3DBB /* LinearTester.cpp */,
 				5ECB9C7B22147E7D00FE3DBB /* LinearTester.hpp */,
+				5E0BA929223FDAEC0018D52F /* GraphTester.cpp */,
+				5E0BA92A223FDAEC0018D52F /* GraphTester.hpp */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ECB8081220C84D7008F09E3 /* Music.cpp in Sources */,
+				5E0BA92B223FDAEC0018D52F /* GraphTester.cpp in Sources */,
 				5ECB8080220C84D7008F09E3 /* CrimeData.cpp in Sources */,
 				5E1348B02209DD7C00EFB324 /* Timer.cpp in Sources */,
 				5E4A1E622201F40200933877 /* Runnner.cpp in Sources */,

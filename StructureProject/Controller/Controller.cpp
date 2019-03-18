@@ -11,26 +11,17 @@
 
 void Controller :: start()
 {
-    cout << 5 << endl;
-    test();
+    readFromFile();
 }
 
-void Controller :: testLinear()
+void Controller :: readFromFile()
 {
-    LinearTester test;
-    test.testVsSTL();
-    test.testVsStack();
-    test.testVsQueue();
-    test.testVsDouble();
-}
-
-void Controller :: test()
-{
-    Graph<int> myGraph;
-    myGraph.addVertex(1);
-    myGraph.addVertex(2);
-    myGraph.addVertex(5);
-    myGraph.addEdge(1, 2);
-    myGraph.addEdgeUndirected(1, 0);
+    LinkedList<CrimeData> crime = FileController :: crimeDataToList("/Users/rphi8796/Documents/C++/StructureProject/StructureProject/Resources/crime.csv");
     
+    for (int i = 234; i < 256; i++)
+    {
+        cout << crime.getFromIndex(i) << endl;
+    }
 }
+
+
