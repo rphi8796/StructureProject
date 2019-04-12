@@ -6,7 +6,7 @@
 //  Copyright © 2019 CTEC. All rights reserved.
 //
 
-include "Node.hpp"
+#include "Node.hpp"
 
 #ifndef BinaryTreeNode_hpp
 #define BinaryTreeNode_hpp
@@ -16,47 +16,47 @@ class BinaryTreeNode : public Node<Type>
 {
 protected:
     BinaryTreeNode<Type> * root;
-    BinaryTreeNode<Type> * leftChild;
-    BinaryTreeNode<Type> * rightChild;
+    BinaryTreeNode<Type> * left;
+    BinaryTreeNode<Type> * right;
 public:
     BinaryTreeNode();
     BinaryTreeNode(Type data);
     BinaryTreeNode(Type data,
                    BinaryTreeNode<Type> * root,
-                   BinaryTreeNode<Type> * leftChild,
-                   BinaryTreeNode<Type> * rightChild);
+                   BinaryTreeNode<Type> * left,
+                   BinaryTreeNode<Type> * right);
     
     BinaryTreeNode<Type> * getRoot();
-    BinaryTreeNode<Type> * getRightChild();
-    BinaryTreeNode<Type> * getLeftChild();
+    BinaryTreeNode<Type> * getRight();
+    BinaryTreeNode<Type> * getLeft();
     
     void setRoot(BinaryTreeNode<Type> * root);
-    void setLeftChild(BinaryTreeNode<Type> * leftChild);
-    void setRightChild(BinaryTreeNode<Type> * rightChild);
+    void setLeft(BinaryTreeNode<Type> * left);
+    void setRight(BinaryTreeNode<Type> * right);
 };
 
 template <class Type>
 BinaryTreeNode<Type> :: BinaryTreeNode() : Node<Type>()
 {
     this->root = nullptr;
-    this->leftChild = nullptr;
-    this->rightChild = nullptr;
+    this->left = nullptr;
+    this->right = nullptr;
 }
 
 template <class Type>
-BinaryTreeNode<Type> : BinaryTreeNode(Type data) : Node<Type>(data)
+BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : Node<Type>(data)
 {
     this->root = nullptr;
-    this->leftChild = nullptr;
-    this->rightChild = nullptr;
+    this->left = nullptr;
+    this->right = nullptr;
 }
 
 template <class Type>
-BinaryTreeNode<Type> :: BinaryTreeNode(Type data, BinaryTreeNode<Type> * root, BinaryTreeNode<Type> * leftChild, BinaryTreeNode<Type> * rightChild) : Node<Type>(data)
+BinaryTreeNode<Type> :: BinaryTreeNode(Type data, BinaryTreeNode<Type> * root, BinaryTreeNode<Type> * left, BinaryTreeNode<Type> * right) : Node<Type>(data)
 {
     this->root = root;
-    this->leftChild = leftChild;
-    this->rightChild = rightChild;
+    this->left = left;
+    this->right = right;
 }
 
 template <class Type>
@@ -66,15 +66,15 @@ BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRoot()
 }
 
 template <class Type>
-BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftChild()
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeft()
 {
-    return leftChild;
+    return left;
 }
 
 template <class Type>
-BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRightChild()
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRight()
 {
-    return rightChild;
+    return right;
 }
 
 template <class Type>
@@ -84,15 +84,15 @@ void BinaryTreeNode<Type> :: setRoot(BinaryTreeNode * root)
 }
 
 template <class Type>
-void BinaryTreeNode<Type> :: setLeftChild(BinaryTreeNode * leftChild)
+void BinaryTreeNode<Type> :: setLeft(BinaryTreeNode * left)
 {
-    this->leftChild = leftChild;
+    this->left = left;
 }
 
 template <class Type>
-void BinaryTreeNode<Type> :: setRightChild(BinaryTreeNode * rightChild)
+void BinaryTreeNode<Type> :: setRight(BinaryTreeNode * right)
 {
-    this->rightChild = rightChild;
+    this->right = right;
 }
 
 #endif /* BinaryTreeNode_hpp */

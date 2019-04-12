@@ -18,6 +18,7 @@
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
 #include "../Model/Nodes/DoubleNode.hpp"
+#include "../Model/Nodes/BinaryTreeNode.hpp"
 #include "../Model/Linear/Array.hpp"
 #include "../Model/Linear/List.hpp"
 #include "../Model/Linear/LinkedList.hpp"
