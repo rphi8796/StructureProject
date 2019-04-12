@@ -11,8 +11,26 @@
 
 void Controller :: start()
 {
-    GraphTester test;
-    test.testGraphs();
+    Stack<int> quizStack;
+    quizStack.push(5);
+    
+    quizStack.push(3);
+    
+    quizStack.pop();
+    
+    quizStack.push(15);
+    
+    quizStack.peek();
+    
+    quizStack.push(54);
+    
+    quizStack.pop();
+    
+    quizStack.push(56);
+    
+    cout << quizStack.pop() << endl;
+    cout << quizStack.pop() << endl;
+    cout << quizStack.pop() << endl;
 }
 
 void Controller :: readFromFile()
