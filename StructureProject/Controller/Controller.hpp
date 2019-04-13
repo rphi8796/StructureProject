@@ -26,8 +26,10 @@
 #include "../Model/Linear/Queue.hpp"
 #include "../Model/Linear/CircularList.hpp"
 #include "../Testers/LinearTester.hpp"
-#include "../Model/NonLinear/Graph.hpp"
 #include "../Testers/GraphTester.hpp"
+#include "../Testers/BinaryTreeTester.hpp"
+#include "../Model/NonLinear/Graph.hpp"
+
 
 
 
@@ -35,8 +37,6 @@ using namespace std;
 
 class Controller
 {
-private:
-    void readFromFile();
 public:
     void start();
     

@@ -8,11 +8,4 @@
 
 #include "BinaryTreeTester.hpp"
 
-#include "../Model/Nodes/BinaryTreeNode.hpp"
 
-class BinaryTreeTester
-{
-private:
-    BinaryTreeNode<int> testNode;
-    
-};
