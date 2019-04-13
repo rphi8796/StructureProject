@@ -32,5 +32,6 @@ void Controller :: test()
     myGraph.addVertex(5);
     myGraph.addEdge(1, 2);
     myGraph.addEdgeUndirected(1, 0);
+    cout << "LOL" << endl;
     
 }
