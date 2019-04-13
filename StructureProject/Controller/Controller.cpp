@@ -11,27 +11,35 @@
 
 void Controller :: start()
 {
-    cout << 5 << endl;
-    test();
-}
-
-void Controller :: testLinear()
-{
-    LinearTester test;
-    test.testVsSTL();
-    test.testVsStack();
-    test.testVsQueue();
-    test.testVsDouble();
-}
-
-void Controller :: test()
-{
-    Graph<int> myGraph;
-    myGraph.addVertex(1);
-    myGraph.addVertex(2);
-    myGraph.addVertex(5);
-    myGraph.addEdge(1, 2);
-    myGraph.addEdgeUndirected(1, 0);
-    cout << "LOL" << endl;
+    Stack<int> quizStack;
+    quizStack.push(5);
     
+    quizStack.push(3);
+    
+    quizStack.pop();
+    
+    quizStack.push(15);
+    
+    quizStack.peek();
+    
+    quizStack.push(54);
+    
+    quizStack.pop();
+    
+    quizStack.push(56);
+    
+    cout << quizStack.pop() << endl;
+    cout << quizStack.pop() << endl;
+    cout << quizStack.pop() << endl;
 }
+
+void Controller :: readFromFile()
+{
+    
+    for (int i = 234; i < 256; i++)
+    {
+        cout << crime.getFromIndex(i) << endl;
+    }
+}
+
+

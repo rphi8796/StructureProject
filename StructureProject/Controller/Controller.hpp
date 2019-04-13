@@ -18,6 +18,7 @@
 #include "../Model/Nodes/Node.hpp"
 #include "../Model/Nodes/LinearNode.hpp"
 #include "../Model/Nodes/DoubleNode.hpp"
+#include "../Model/Nodes/BinaryTreeNode.hpp"
 #include "../Model/Linear/Array.hpp"
 #include "../Model/Linear/List.hpp"
 #include "../Model/Linear/LinkedList.hpp"
@@ -26,6 +27,7 @@
 #include "../Model/Linear/CircularList.hpp"
 #include "../Testers/LinearTester.hpp"
 #include "../Model/NonLinear/Graph.hpp"
+#include "../Testers/GraphTester.hpp"
 
 
 
@@ -34,9 +36,7 @@ using namespace std;
 class Controller
 {
 private:
-//    void usingNodes();
-    void testLinear();
-    void test();
+    void readFromFile();
 public:
     void start();
     
