@@ -193,6 +193,7 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
         insertMe->setRoot(previous);
     }
     
+    
 }
 
 //Recursive Data Helpers
@@ -214,7 +215,7 @@ void BinarySearchTree<Type> :: preOrderTraversal()
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
-    
+    postOrderTraversal(this->root);
 }
 
 
