@@ -26,7 +26,10 @@
 #include "../Model/Linear/Queue.hpp"
 #include "../Model/Linear/CircularList.hpp"
 #include "../Testers/LinearTester.hpp"
+#include "../Testers/BinaryTreeTester.hpp"
 #include "../Model/NonLinear/Graph.hpp"
+#include "../Model/NonLinear/Tree.hpp"
+#include "../Model/NonLinear/BinarySearchTree.hpp"
 #include "../Testers/GraphTester.hpp"
 
 
@@ -35,8 +38,8 @@ using namespace std;
 
 class Controller
 {
-private:
-    void readFromFile();
+protected:
+    BinaryTreeTester test;
 public:
     void start();
     

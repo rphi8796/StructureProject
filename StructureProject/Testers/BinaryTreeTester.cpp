@@ -10,9 +10,7 @@
 
 #include "../Model/Nodes/BinaryTreeNode.hpp"
 
-class BinaryTreeTester
+void BinaryTreeTester :: treeStuff()
 {
-private:
-    BinaryTreeNode<int> testNode;
     
-};
+}
