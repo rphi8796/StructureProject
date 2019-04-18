@@ -63,6 +63,19 @@ public:
     
 
 };
+//Constructor/de
+template <class Type>
+BinarySearchTree<Type> :: BinarySearchTree()
+{
+    
+}
+
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    
+}
+
 
 //Informational Methods
 template <class Type>
@@ -78,7 +91,7 @@ int BinarySearchTree<Type> :: getSize()
 template <class Type>
 int BinarySearchTree<Type> :: getHeight()
 {
-    return calculateHeight(this->Height);
+    return calculateHeight(this->root);
 }
 
 template <class Type>
@@ -98,11 +111,21 @@ bool BinarySearchTree<Type> :: isBalanced()
 
 //Recursive Information Helpers
 template <class Type>
+int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * current)
+{
+    if (current != nullptr)
+    {
+        return calculateSize(current->getLeft() + calculateSize(current->getRight()) + 1);
+    }
+    return 0;
+}
+
+template <class Type>
 int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * current)
 {
     if (current != nullptr)
     {
-        return max(calculateHeight(current->getLeftChild()), calculateHeight(current->getRightChild()))+ 1;
+        return max(calculateHeight(current->getLeft()), calculateHeight(current->getRight()))+ 1;
     }
     return 0;
 }
@@ -146,7 +169,7 @@ bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int 
         return false;
     }
     
-    return (isComplete(startNode->getLeftChild(), 2 * index + 1, size) && isComplete(startNode->getRight(), 2 * index + 2, size));
+    return (isComplete(startNode->getLeft(), 2 * index + 1, size) && isComplete(startNode->getRight(), 2 * index + 2, size));
 }
 
 //Data methods
@@ -240,7 +263,19 @@ void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentN
     {
         cout << currentNode->getData() << endl;
         preOrderTraversal(currentNode->getLeft());
-        preOrderTraversal(currentNode->getRightChild());
+        preOrderTraversal(currentNode->getRight());
+    }
+}
+
+//Order for this is Left, Right, Root
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if (currentNode != nullptr)
+    {
+        postOrderTraversal(currentNode->getLeft());
+        postOrderTraversal(currentNode->getRight());
+        cout << currentNode->getData() << endl;
     }
 }
 
