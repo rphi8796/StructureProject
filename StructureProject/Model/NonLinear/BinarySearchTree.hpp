@@ -109,6 +109,62 @@ bool BinarySearchTree<Type> :: isBalanced()
     return isBalanced(this->root);
 }
 
+
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
+{
+    if (this->root == nullptr)
+    {
+        cout << "Empty tree so removal is not possible" << endl;
+    }
+    else
+    {
+        BinaryTreeNode<Type> * current = this->root;
+        BinaryTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound = false;
+        
+        while (current != nullptr && !hasBeenFound)
+        {
+            if (current->getData() == getRidOfMe)
+            {
+                hasBeenFound = true;
+            }
+            else
+            {
+                previous = current;
+                if (getRidOfMe < current->getData())
+                {
+                    current = current->getLeft();
+                }
+                else
+                {
+                    current = current->getRight();
+                }
+            }
+        }
+        if (current == nullptr)
+        {
+            cerr << "Item not found, removal unsuccessful" << endl;
+        }
+        else if (hasBeenFound)
+        {
+            if (current == this->root)
+            {
+                removeNode(this->root);
+            }
+            else if (getRidOfMe < previous->getData())
+            {
+                removeNode(previous->getLeft());
+            }
+            else
+            {
+                removeNode(previous->getRightNode());
+            }
+        }
+    }
+}
+
+
 //Recursive Information Helpers
 template <class Type>
 int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * current)
@@ -125,7 +181,7 @@ int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * current)
 {
     if (current != nullptr)
     {
-        return max(calculateHeight(current->getLeft()), calculateHeight(current->getRight()))+ 1;
+        return max(calculateHeight(current->getLeft()), calculateHeight(current->getRight())) + 1;
     }
     return 0;
 }
@@ -219,8 +275,62 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
     
 }
 
-//Recursive Data Helpers
+template <class Type>
+bool BinarySearchTree<Type> :: contains(Type itemToFind)
+{
+    BinaryTreeNode<Type> * current = this->root;
+    if (current == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        while (current != nullptr)
+        {
+            if (itemToFind == current->getData())
+            {
+                return true;
+            }
+            else if (itemToFind < current -> getData())
+            {
+                current = current->getleft();
+            }
+            else
+            {
+                current = current->getRight();
+            }
+        }
+        return false;
+    }
+}
 
+//Recursive Data Helpers
+template <class Type>
+void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
+{
+    BinaryTreeNode<Type> * current;
+    BinaryTreeNode<Type> * previous;
+    BinaryTreeNode<Type> * temp;
+    
+    previous = removeMe->getRoot();
+    
+    if (removeMe->getRight() == nullptr && removeMe->getLeft() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = nullptr;
+        
+        if (previous != nullptr && removeMe->getData() < previous->getData())
+        {
+            previous->setLeft(removeMe);
+        }
+        else if (previous != nullptr && removeMe->getData() > previous->getData())
+        {
+            previous->setRightNode(removeMe);
+        }
+        
+        delete temp;
+    }
+}
 
 //Traversals
 template <class Type>
