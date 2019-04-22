@@ -11,7 +11,7 @@
 
 void Controller :: start()
 {
-    
+    test.treeStuff();
 }
 
 

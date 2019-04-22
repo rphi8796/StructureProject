@@ -12,33 +12,34 @@
 
 void BinaryTreeTester :: treeStuff()
 {
-//    testTree.insert(8);
-//    testTree.insert(4);
-//    testTree.insert(12);
-//    testTree.insert(2);
-//    testTree.insert(6);
-//    testTree.insert(10);
-//    testTree.insert(14);
-//    testTree.insert(1);
-//    testTree.insert(2);
-//    testTree.insert(7);
-//    testTree.insert(9);
-//    testTree.insert(11);
-//    testTree.insert(13);
-//    testTree.insert(15);
-    
-    
-    testTree.insert(7);
-    testTree.insert(1);
-    testTree.insert(24);
+    testTree.insert(4);
+    testTree.insert(2);
     testTree.insert(6);
-    testTree.insert(66);
+    testTree.insert(1);
+    testTree.insert(3);
     testTree.insert(5);
-    testTree.insert(25);
-    testTree.insert(4380);
-    testTree.insert(99);
-    testTree.insert(9001);
-    testTree.insert(101);
+    testTree.insert(7);
+
     
+    cout << "in order" << endl;
     testTree.inOrderTraversal();
+    cout << endl << "pre order" << endl;
+    testTree.preOrderTraversal();
+    cout << endl << "post order" << endl;
+    testTree.postOrderTraversal();
+    
+    words.insert("bb");
+    words.insert("ab");
+    words.insert("cb");
+    words.insert("aa");
+    words.insert("ac");
+    words.insert("ca");
+    words.insert("cb");
+    
+    cout << endl << "in order" << endl;
+    words.inOrderTraversal();
+    cout << endl << "pre order" << endl;
+    words.preOrderTraversal();
+    cout << endl << "post order" << endl;
+    words.postOrderTraversal();
 }

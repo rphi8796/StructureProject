@@ -71,7 +71,7 @@ public:
 template <class Type>
 BinarySearchTree<Type> :: BinarySearchTree()
 {
-    
+    this->root = nullptr;
 }
 
 template <class Type>
@@ -284,7 +284,6 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
             }
             else
             {
-                cerr << "Item exists already - Exiting insert" << endl;
                 delete insertMe;
                 return;
             }
@@ -300,8 +299,6 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
         }
         insertMe->setRoot(previous);
     }
-    
-    
 }
 
 template <class Type>
