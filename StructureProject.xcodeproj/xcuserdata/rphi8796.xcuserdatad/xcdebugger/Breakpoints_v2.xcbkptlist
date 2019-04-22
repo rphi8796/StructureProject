@@ -2,4 +2,117 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StructureProject/Model/NonLinear/BinarySearchTree.hpp"
+            timestampString = "577638971.016323"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "345"
+            endingLineNumber = "345"
+            landmarkName = "destroyTree(BinaryTreeNode&lt;Type&gt; * node)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BinarySearchTree&lt;int&gt;::inOrderTraversal()"
+                  moduleName = "StructureProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rphi8796/Documents/C++/StructureProject/StructureProject/Testers/../Model/NonLinear/BinarySearchTree.hpp"
+                  timestampString = "577638971.172365"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "457"
+                  endingLineNumber = "457"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BinarySearchTree&lt;int&gt;::destroyTree(BinaryTreeNode&lt;int&gt;*)"
+                  moduleName = "StructureProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rphi8796/Documents/C++/StructureProject/StructureProject/Controller/../Model/NonLinear/BinarySearchTree.hpp"
+                  timestampString = "577638971.174685"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "346"
+                  endingLineNumber = "346"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StructureProject/Model/NonLinear/BinarySearchTree.hpp"
+            timestampString = "577638971.016759"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BinarySearchTree&lt;int&gt;::insert(int)"
+                  moduleName = "StructureProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rphi8796/Documents/C++/StructureProject/StructureProject/Testers/../Model/NonLinear/BinarySearchTree.hpp"
+                  timestampString = "577638971.19697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "264"
+                  endingLineNumber = "264"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BinarySearchTree&lt;int&gt;::~BinarySearchTree()"
+                  moduleName = "StructureProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rphi8796/Documents/C++/StructureProject/StructureProject/Controller/../Model/NonLinear/BinarySearchTree.hpp"
+                  timestampString = "577638971.1989599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BinarySearchTree&lt;int&gt;::~BinarySearchTree()"
+                  moduleName = "StructureProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rphi8796/Documents/C++/StructureProject/StructureProject/Controller/../Model/NonLinear/BinarySearchTree.hpp"
+                  timestampString = "577638971.2009749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
