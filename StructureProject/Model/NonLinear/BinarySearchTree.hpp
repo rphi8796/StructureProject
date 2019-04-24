@@ -38,6 +38,7 @@ protected:
     void removeNode(BinaryTreeNode<Type> * removeMe);
     
 public:
+    //(De)Constructors
     BinarySearchTree();
     ~BinarySearchTree();
     
@@ -117,59 +118,6 @@ bool BinarySearchTree<Type> :: isBalanced()
 }
 
 
-template <class Type>
-void BinarySearchTree<Type> :: remove(Type getRidOfMe)
-{
-    if (this->root == nullptr)
-    {
-        cout << "Empty tree so removal is not possible" << endl;
-    }
-    else
-    {
-        BinaryTreeNode<Type> * current = this->root;
-        BinaryTreeNode<Type> * previous = nullptr;
-        bool hasBeenFound = false;
-        
-        while (current != nullptr && !hasBeenFound)
-        {
-            if (current->getData() == getRidOfMe)
-            {
-                hasBeenFound = true;
-            }
-            else
-            {
-                previous = current;
-                if (getRidOfMe < current->getData())
-                {
-                    current = current->getLeft();
-                }
-                else
-                {
-                    current = current->getRight();
-                }
-            }
-        }
-        if (current == nullptr)
-        {
-            cerr << "Item not found, removal unsuccessful" << endl;
-        }
-        else if (hasBeenFound)
-        {
-            if (current == this->root)
-            {
-                removeNode(this->root);
-            }
-            else if (getRidOfMe < previous->getData())
-            {
-                removeNode(previous->getLeft());
-            }
-            else
-            {
-                removeNode(previous->getRight());
-            }
-        }
-    }
-}
 
 template <class Type>
 Type BinarySearchTree<Type> :: findMaximum()
@@ -330,6 +278,61 @@ bool BinarySearchTree<Type> :: contains(Type itemToFind)
     }
 }
 
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
+{
+    if (this->root == nullptr)
+    {
+        cout << "Empty tree so removal is not possible" << endl;
+    }
+    else
+    {
+        BinaryTreeNode<Type> * current = this->root;
+        BinaryTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound = false;
+        
+        while (current != nullptr && !hasBeenFound)
+        {
+            if (current->getData() == getRidOfMe)
+            {
+                hasBeenFound = true;
+            }
+            else
+            {
+                previous = current;
+                if (getRidOfMe < current->getData())
+                {
+                    current = current->getLeft();
+                }
+                else
+                {
+                    current = current->getRight();
+                }
+            }
+        }
+        if (current == nullptr)
+        {
+            cerr << "Item not found, removal unsuccessful" << endl;
+        }
+        else if (hasBeenFound)
+        {
+            if (current == this->root)
+            {
+                removeNode(this->root);
+            }
+            else if (getRidOfMe < previous->getData())
+            {
+                removeNode(previous->getLeft());
+            }
+            else
+            {
+                removeNode(previous->getRight());
+            }
+        }
+    }
+}
+
+
 
 
 //
@@ -368,11 +371,11 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
         temp = removeMe;
         removeMe = nullptr;
         
-        if (previous != nullptr && removeMe->getData() < previous->getData())
+        if (previous != nullptr && temp->getData() < previous->getData())
         {
             previous->setLeft(removeMe);
         }
-        else if (previous != nullptr && removeMe->getData() > previous->getData())
+        else if (previous != nullptr && temp->getData() > previous->getData())
         {
             previous->setRight(removeMe);
         }
