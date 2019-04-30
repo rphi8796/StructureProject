@@ -35,6 +35,43 @@ public:
     void remove(Type value);
 };
 
+template <class Type>
+AVLTree<Type> :: AVLTree() : BinarySearchTree<Type>()
+{
+    this->root = nullptr;
+}
+
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type>  :: balanceSubTree (BinaryTreeNode<Type> * parent)
+{
+    int balanceFactor = heightDifference(parent);
+    
+    if(balanceFactor > 1)
+    {
+        if(heightDifference(parent->getLeft()) > 0)
+        {
+            parent = leftRotation(parent);
+        }
+        else
+        {
+            parent = leftRightRotation(parent);
+        }
+    }
+    else if(balanceFactor < -1)
+    {
+        if(heightDifference(parent->getRight()) > 0)
+        {
+            parent = rightLeftRotation(parent);
+        }
+        else
+        {
+            parent = rightRotation(parent);
+        }
+    }
+    return parent;
+}
+
+
 
 /*
  it starts with a parent node and a value to insert and it checks to make sure the parent exists
