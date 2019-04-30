@@ -25,11 +25,12 @@
 #include "../Model/Linear/Stack.hpp"
 #include "../Model/Linear/Queue.hpp"
 #include "../Model/Linear/CircularList.hpp"
-#include "../Testers/LinearTester.hpp"
-#include "../Testers/BinaryTreeTester.hpp"
 #include "../Model/NonLinear/Graph.hpp"
 #include "../Model/NonLinear/Tree.hpp"
 #include "../Model/NonLinear/BinarySearchTree.hpp"
+#include "../Model/NonLinear/AVLTree.hpp"
+#include "../Testers/LinearTester.hpp"
+#include "../Testers/BinaryTreeTester.hpp"
 #include "../Testers/GraphTester.hpp"
 
 
