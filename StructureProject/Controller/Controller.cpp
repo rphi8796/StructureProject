@@ -11,7 +11,9 @@
 
 void Controller :: start()
 {
-    test.treeStuff();
+    
+    
+//    test.treeStuff();
 //    BinaryTreeNode<int> number;
 //    BinaryTreeNode<int> * pointerToNumber;
 //
