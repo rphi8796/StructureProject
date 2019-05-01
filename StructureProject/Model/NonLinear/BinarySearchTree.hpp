@@ -106,7 +106,6 @@ void BinarySearchTree<Type> :: postOrderTraversal()
 
 
 //Data operation
-
 template <class Type>
 void BinarySearchTree<Type> :: insert(Type item)
 {
