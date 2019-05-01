@@ -54,8 +54,6 @@
 		5EB10880221C65F100DDF6BB /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
 		5EBEDD1F22133ACC004E5C24 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
 		5EC22CF321FF5B5200F3F7D0 /* StructureProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StructureProject; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EC22D0121FF5CCA00F3F7D0 /* NodeDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NodeDiagram.png; sourceTree = "<group>"; };
-		5EC22D0221FF5CE500F3F7D0 /* LinearNodeDiagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LinearNodeDiagram.png; sourceTree = "<group>"; };
 		5EC22D0F21FF60BE00F3F7D0 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		5ECB807A220C84D6008F09E3 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		5ECB807B220C84D6008F09E3 /* crime.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crime.csv; sourceTree = "<group>"; };
@@ -66,6 +64,7 @@
 		5ECB8082220C9203008F09E3 /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		5ECB9C7A22147E7D00FE3DBB /* LinearTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearTester.cpp; sourceTree = "<group>"; };
 		5ECB9C7B22147E7D00FE3DBB /* LinearTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearTester.hpp; sourceTree = "<group>"; };
+		5EE9975422788B4A0012197C /* AVLTree.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AVLTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +105,7 @@
 				5E6449432232BD7300E726FA /* Graph.hpp */,
 				5E710E1E2260E440006EC64E /* Tree.hpp */,
 				5E710E1F2260E684006EC64E /* BinarySearchTree.hpp */,
+				5EE9975422788B4A0012197C /* AVLTree.hpp */,
 			);
 			path = NonLinear;
 			sourceTree = "<group>";
@@ -166,8 +166,6 @@
 		5EC22CFD21FF5BD800F3F7D0 /* Diagrams */ = {
 			isa = PBXGroup;
 			children = (
-				5EC22D0221FF5CE500F3F7D0 /* LinearNodeDiagram.png */,
-				5EC22D0121FF5CCA00F3F7D0 /* NodeDiagram.png */,
 			);
 			path = Diagrams;
 			sourceTree = "<group>";

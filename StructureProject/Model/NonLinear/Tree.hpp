@@ -18,7 +18,7 @@ protected:
     BinaryTreeNode<Type> * root;
 public:
     //Informational Methods
-    virtual int getSize = 0;
+    virtual int getSize() = 0;
     virtual int getHeight() = 0;
     virtual bool isComplete() = 0;
     virtual bool isBalanced() = 0;
