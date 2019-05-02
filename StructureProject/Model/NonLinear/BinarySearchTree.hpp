@@ -541,7 +541,4 @@ BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNod
 
 
 
-
-
-
 #endif /* BinarySearchTree_h */

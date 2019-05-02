@@ -7,7 +7,6 @@
 //
 
 #include "BinaryTreeTester.hpp"
-
 #include "../Model/Nodes/BinaryTreeNode.hpp"
 
 void BinaryTreeTester :: treeStuff()
