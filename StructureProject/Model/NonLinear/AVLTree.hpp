@@ -35,6 +35,103 @@ public:
     void remove(Type value);
 };
 
+template <class Type>
+AVLTree<Type> :: AVLTree() : BinarySearchTree<Type>()
+{
+    this->root = nullptr;
+}
+
+template <class Type>
+int AVLTree<Type> :: heightDifference(BinaryTreeNode<Type> * node)
+{
+    int balance;
+    int leftHeight = this->calculateHeight(node->getLeft());
+    int rightHeight = this->calculateHeight(node->getRight());
+    balance = leftHeight - rightHeight;
+    return balance;
+}
+
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: leftRotation(BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;
+    changedNode = parent->getleft();
+    
+    parent->setLeft(changedNode->getRight());
+    
+    changedNode->setRight(parent);
+    parent->setRoot(changedNode);
+    
+    return changedNode;
+}
+
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: rightRotation(BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;
+    changedNode = parent->getRight();
+    
+    parent->setRight(changedNode->getLeftChild());
+    
+    changedNode->setLeft(parent);
+    parent->setRoot(changedNode);
+    
+    return changedNode;
+}
+
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: rightLeftRotation(BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;
+    changedNode = parent->getRight();
+    
+    parent->setRight(leftRotation(changedNode));
+    
+    return rightRotation(parent);
+}
+
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: leftRightRotation(BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;
+    changedNode = parent->getLeft();
+    
+    parent->setLeft(rightRotation(changedNode));
+    
+    return leftRotation(parent);
+}
+
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type>  :: balanceSubTree (BinaryTreeNode<Type> * parent)
+{
+    int balanceFactor = heightDifference(parent);
+    
+    if(balanceFactor > 1)
+    {
+        if(heightDifference(parent->getLeft()) > 0)
+        {
+            parent = leftRotation(parent);
+        }
+        else
+        {
+            parent = leftRightRotation(parent);
+        }
+    }
+    else if(balanceFactor < -1)
+    {
+        if(heightDifference(parent->getRight()) > 0)
+        {
+            parent = rightLeftRotation(parent);
+        }
+        else
+        {
+            parent = rightRotation(parent);
+        }
+    }
+    return parent;
+}
+
+
 
 /*
  it starts with a parent node and a value to insert and it checks to make sure the parent exists
@@ -48,7 +145,10 @@ BinaryTreeNode<Type> * AVLTree<Type> :: insertNode(BinaryTreeNode<Type> * parent
     if(parent == nullptr)//if the parent does not exist
     {
         parent = new BinaryTreeNode<Type>(inserted);
-        this->setRoot(parent);
+        if (this->getRoot() == nullptr)
+        {
+            this->setRoot(parent);
+        }
         return parent;
     }
     else if(inserted < parent->getData())//node is greater than parent

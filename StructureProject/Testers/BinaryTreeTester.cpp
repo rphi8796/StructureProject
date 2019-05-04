@@ -18,8 +18,6 @@ void BinaryTreeTester :: treeStuff()
     testTree.insert(3);
     testTree.insert(5);
     testTree.insert(7);
-    testTree.insert(223);
-    testTree.remove(223);
     cout << "in order" << endl;
     testTree.inOrderTraversal();
     cout << endl << "pre order" << endl;

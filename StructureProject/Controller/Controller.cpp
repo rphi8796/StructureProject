@@ -11,17 +11,6 @@
 void Controller :: start()
 {
     test.treeStuff();
-    BinaryTreeNode<int> number;
-    BinaryTreeNode<int> * pointerToNumber;
-
-    number = 7;
-    pointerToNumber = &number;
-    int value = pointerToNumber->getData();
-    pointerToNumber = nullptr;
-    bool valueTwo = (pointerToNumber->getData() < 8);
-
-
-    cout << number.getData() << ", " << value << ", " << valueTwo << endl;
 }
 
 
