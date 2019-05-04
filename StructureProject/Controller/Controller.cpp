@@ -8,11 +8,8 @@
 
 #include "Controller.hpp"
 
-
 void Controller :: start()
 {
-    BinaryTreeTester test;
-}
     test.treeStuff();
     BinaryTreeNode<int> number;
     BinaryTreeNode<int> * pointerToNumber;

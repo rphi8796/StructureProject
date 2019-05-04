@@ -36,9 +36,6 @@
 #include "../Testers/BinaryTreeTester.hpp"
 #include "../Model/NonLinear/Graph.hpp"
 
-
-
-
 using namespace std;
 
 class Controller
